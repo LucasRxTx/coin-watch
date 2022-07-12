@@ -1,0 +1,4 @@
+websockets
+aioredis
+fastapi
+uvicorn

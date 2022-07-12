@@ -1,0 +1,29 @@
+version: "3"
+services:
+  ingest:
+    build: .
+    entrypoint: ./entrypoint-ingest.sh
+    depends_on:
+      - redis
+    volumes:
+      - .:/code
+  api:
+    build: .
+    entrypoint: ./entrypoint-api.sh
+    depends_on:
+      - redis
+    ports:
+      - 9090:9090
+    volumes:
+      - .:/code
+  watch:
+    build: .
+    entrypoint: ./entrypoint-watch.sh
+    depends_on:
+      - redis
+    volumes:
+      - .:/code
+  redis:
+    image: redis
+    ports:
+      - 127.0.0.1:6379:6379

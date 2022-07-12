@@ -1,0 +1,24 @@
+websockets==10.3
+aioredis==2.0.1
+fastapi==0.78.0
+uvicorn==0.18.2
+## The following requirements were added by pip freeze:
+anyio==3.6.1
+async-timeout==4.0.2
+black==22.6.0
+click==8.1.3
+flake8==4.0.1
+h11==0.13.0
+idna==3.3
+mccabe==0.6.1
+mypy==0.961
+mypy-extensions==0.4.3
+pathspec==0.9.0
+platformdirs==2.5.2
+pycodestyle==2.8.0
+pydantic==1.9.1
+pyflakes==2.4.0
+sniffio==1.2.0
+starlette==0.19.1
+tomli==2.0.1
+typing_extensions==4.3.0
