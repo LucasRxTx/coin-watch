@@ -2,14 +2,14 @@ version: "3"
 services:
   ingest:
     build: .
-    entrypoint: ./entrypoint-ingest.sh
+    entrypoint: ./entrypoint.sh ingest
     depends_on:
       - redis
     volumes:
       - .:/code
   api:
     build: .
-    entrypoint: ./entrypoint-api.sh
+    entrypoint: ./entrypoint.sh api
     depends_on:
       - redis
     ports:
@@ -18,7 +18,7 @@ services:
       - .:/code
   watch:
     build: .
-    entrypoint: ./entrypoint-watch.sh
+    entrypoint: ./entrypoint.sh watch
     depends_on:
       - redis
     volumes:

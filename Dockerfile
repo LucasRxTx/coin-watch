@@ -1,6 +1,6 @@
 FROM python:3.10-slim as build
 
-ENV PYTHONUNBUFFERED=1
+ENV PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1
 
 RUN apt-get -y update && apt-get -y install python3-dev tini libpq-dev
 
